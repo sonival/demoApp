@@ -1,0 +1,31 @@
+spring:
+    profile:
+        active: dev
+    config:
+        activate:
+            on-profile: dev
+    h2:
+        console:
+            enabled: true
+            path: /h2
+            settings.trace: false
+            settings.web-allow-others: false 
+    datasource:
+        url: jdbc:h2:mem:demoDB;
+        username: sa
+        password:
+        driverClassName: org.h2.Driver
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        defer-datasource-initialization: false
+        hibernate:
+            ddl-auto: update
+name: dev-YAML
+environment: developer
+enabled: true
+---
+spring:
+    config:
+        activate:
+            on-profile: prod
+enabled: false
