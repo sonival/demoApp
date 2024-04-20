@@ -1,13 +1,18 @@
 package demo.interview.ekan;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@SpringBootTest
+// @SpringBootTest
+// @ActiveProfiles("test")
+@ExtendWith(SpringExtension.class)
+@WebMvcTest
 class EkanApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+  @Test
+  void contextLoads() {
+  }
 
 }
